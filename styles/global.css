@@ -4,7 +4,21 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-family: 'Oxygen', sans-serif;
+  
+  --title-md: 700 1.5rem/1.4 var(--font-family);
+  --title-sm: 700 1.125rem/1.4 var(--font-family);
+  --subtitle-md: 700 0.875rem/1.4 var(--font-family);
+  --subtitle-sm: 700 0.75rem/1.4 var(--font-family);
+  --text-md: 500 1rem/1.4 var(--font-family);
+  --text-sm: 500 0.875rem/1.4 var(--font-family);
+  --text-xs: 500 0.75rem/1.4 var(--font-family);
+}
+
 body {
+  font: var(--text-md);
+
   color: FloralWhite;
   background: SlateBlue;
 }
