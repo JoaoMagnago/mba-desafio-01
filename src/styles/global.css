@@ -15,22 +15,22 @@
   --text-sm: 500 0.875rem/1.4 var(--font-family);
   --text-xs: 500 0.75rem/1.4 var(--font-family);
 
-  --pink: #D658B3
-  --green: #45B442
-  --gray-100: #F4F1F2
-  --gray-200: #E9E7E9
-  --gray-300: #DFDCDF
-  --gray-400: #D3CFD2
-  --gray-500: #756C71
-  --gray-600: #4A4448
-  --gray-700: #332B31
-  --white: #FFFFFF
-  --gradient-base: linear-gradient(90deg, #2DAA6E 0%, #2DAAAA 33.33%, #856CCF 66.67%, #D658B3 100%)
+  --pink: #D658B3;
+  --green: #45B442;
+  --gray-100: #F4F1F2;
+  --gray-200: #E9E7E9;
+  --gray-300: #DFDCDF;
+  --gray-400: #D3CFD2;
+  --gray-500: #756C71;
+  --gray-600: #4A4448;
+  --gray-700: #332B31;
+  --white: #FFFFFF;
+  --gradient-base: linear-gradient(90deg, #2DAA6E 0%, #2DAAAA 33.33%, #856CCF 66.67%, #D658B3 100%);
 }
 
 body {
   font: var(--text-md);
 
-  color: FloralWhite;
+  color: var(--gray-500);
   background: var(--gray-200);
 }

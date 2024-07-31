@@ -1,0 +1,69 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-block: 4rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  & img[src*="Logo"] {
+    width: 7.25rem;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 25rem;
+    padding: 0.5rem;
+    border: 1.5px solid var(--gray-400);
+    border-radius: 12px;
+
+    background-color: var(--gray-300);
+
+    & input {
+      background: transparent;
+      padding-inline-start: 0.5rem;
+      border: none;
+      outline: none;
+      font: var(--text-md);
+      
+      &::placeholder {
+        color: var(--gray-500);
+      }
+    }
+
+    & button {
+      height: 2.5rem;
+      width: 2.5rem;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--gray-700);
+      transition: background-color 100ms ease-in-out;
+
+      & img {
+        height: 1.25rem;
+      }
+
+      &:hover {
+        background-color: var(--gray-600);
+        cursor: pointer;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  & div:focus-within {
+    border: 1px solid red;
+  }
+}
