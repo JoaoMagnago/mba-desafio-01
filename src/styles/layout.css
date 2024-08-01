@@ -2,75 +2,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding-block: 4rem;
+  gap: 4rem;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-
-  & img[src*="Logo"] {
-    width: 7.25rem;
-  }
-
-  & div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    width: 25rem;
-    padding: 0.5rem;
-    border: 1.5px solid var(--gray-400);
-    border-radius: 12px;
-
-    background-color: var(--gray-300);
-
-    & input {
-      background: transparent;
-      padding-inline-start: 0.5rem;
-      border: none;
-      outline: none;
-      font: var(--text-md);
-      
-      &::placeholder {
-        color: var(--gray-500);
-      }
-    }
-
-    & button {
-      height: 2.5rem;
-      width: 2.5rem;
-      border: none;
-      border-radius: 8px;
-      background-color: var(--gray-700);
-      transition: background-color 100ms ease-in-out;
-
-      & img {
-        height: 1.25rem;
-      }
-
-      &:hover {
-        background-color: var(--gray-600);
-        cursor: pointer;
-      }
-
-      &:disabled {
-        opacity: 0.6;
-      }
-    }
-  }
-
-  & div:focus-within {
-    border: 1px solid red;
-  }
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 
+    'A B B'
+    'C B B'
+    'C B B'
+    'C D D';
+  gap: 1.5rem;
+  width: 100%;
 }
 
-@media (width <= 50em) {
+@media (width <= 60em) {
   body {
-    padding-inline: 0.75rem;
+    padding: 2rem 0.75rem 0.9375rem 0.75rem;
+  }
+
+  .container {
+    grid-template-areas: 'A' 'B' 'C' 'D';
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 0.5rem;
   }
 
   header {

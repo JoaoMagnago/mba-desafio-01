@@ -33,4 +33,6 @@ body {
 
   color: var(--gray-500);
   background: var(--gray-200);
+
+  padding: 4rem 18.3% 10.125rem;
 }

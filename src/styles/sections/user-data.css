@@ -1,0 +1,10 @@
+.user-data {
+  grid-area: A;
+  border: 1px solid;
+}
+
+@media (width <= 60em) {
+  .user-data {
+    grid-row: 1;
+  }
+}

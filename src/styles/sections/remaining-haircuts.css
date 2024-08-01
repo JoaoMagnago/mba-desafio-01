@@ -1,0 +1,10 @@
+.remaining-haircuts {
+  grid-area: D;
+  border: 1px solid;
+}
+
+@media (width <= 60em) {
+  .remaining-haircuts {
+    grid-row: 3;
+  }
+}

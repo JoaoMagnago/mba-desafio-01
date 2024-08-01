@@ -1,0 +1,10 @@
+.history {
+  grid-area: C;
+  border: 1px solid;
+}
+
+@media (width <= 60em) {
+  .history {
+    grid-row: 4;
+  }
+}

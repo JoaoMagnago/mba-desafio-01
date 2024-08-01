@@ -1,0 +1,10 @@
+.loyalty-card {
+  grid-area: B;
+  border: 1px solid;
+}
+
+@media (width <= 60em) {
+  .loyalty-card {
+    grid-row: 2;
+  }
+}
