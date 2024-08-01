@@ -67,3 +67,17 @@ header {
     border: 1px solid red;
   }
 }
+
+@media (width <= 50em) {
+  body {
+    padding-inline: 0.75rem;
+  }
+
+  header {
+    width: 100%;
+
+    & div {
+      width: inherit;
+    }
+  }
+}
