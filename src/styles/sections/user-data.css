@@ -1,6 +1,47 @@
 .user-data {
   grid-area: A;
-  border: 1px solid;
+  padding: 1rem;
+
+  display: flex;
+  align-items: start;
+  flex-direction: row;
+  gap: 1rem;
+
+  & h3 {
+    font: var(--title-sm);
+    color: var(--gray-600);
+  }
+
+  & span {
+    font: var(--text-xs);
+    color: var(--gray-500);
+  }
+
+  & .img-container {
+    position: relative;
+
+    & img {
+      object-fit: contain;
+      height: 56px;
+      width: 56px;
+    }
+
+    padding: 2px;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: 1.5rem;
+      background: var(--gradient-base);
+    }
+  }
+
+  & div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }  
 }
 
 @media (width <= 60em) {

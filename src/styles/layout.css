@@ -15,6 +15,12 @@
     'C D D';
   gap: 1.5rem;
   width: 100%;
+
+  & > div {
+    border-radius: 16px;
+    border: 1px solid var(--gray-300);
+    background: var(--gray-100);
+  }
 }
 
 @media (width <= 60em) {
