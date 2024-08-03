@@ -1,6 +1,61 @@
 .remaining-haircuts {
   grid-area: D;
   border: 1px solid;
+  padding-block: 1.6875rem;
+  padding-inline: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+
+  & .remaining-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.03125rem;
+
+    & span {
+      & strong {
+        font: var(--title-md);
+        color: var(--gray-800);
+      }
+
+      font: var(--text-md);
+      color: var(--gray-500);
+    }
+
+    & div {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      & .progress-bar-track {
+        background: var(--gray-300);
+        width: 21.9375rem;
+        height: 0.5rem;
+        border-radius: 12px;
+
+        &::before {
+          content: '';
+          inset: 0;
+          width: 70%;
+          height: 100%;
+          background: var(--gradient-base);
+          border-radius: 12px;
+        }
+      }
+
+      & span {
+        font: var(--text-xs);
+      }
+    }
+  }
+
+  & > div:last-of-type {
+    background: var(--gray-200);
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+  }
 }
 
 @media (width <= 60em) {
