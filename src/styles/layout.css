@@ -14,6 +14,7 @@
     'C B B'
     'C D D';
   gap: 1.5rem;
+  max-width: 57rem;
   width: 100%;
 
   & > div {
