@@ -65,5 +65,21 @@
 @media (width <= 60em) {
   .loyalty-card {
     grid-row: 2;
+
+    & .card-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+
+      & > span {
+        justify-self: end;
+        width: fit-content;
+      }
+    }
+
+    & .card-list div {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
   }
 }

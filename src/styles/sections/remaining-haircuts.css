@@ -30,7 +30,7 @@
 
       & .progress-bar-track {
         background: var(--gray-300);
-        width: 21.9375rem;
+        width: 80%;
         height: 0.5rem;
         border-radius: 12px;
 

@@ -78,5 +78,7 @@
 @media (width <= 60em) {
   .history {
     grid-row: 4;
+    overflow: hidden;
+    max-height: unset;
   }
 }

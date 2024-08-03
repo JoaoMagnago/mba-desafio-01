@@ -26,6 +26,7 @@ header {
       border: none;
       outline: none;
       font: var(--text-md);
+      width: 85%;
       
       &::placeholder {
         color: var(--gray-500);
