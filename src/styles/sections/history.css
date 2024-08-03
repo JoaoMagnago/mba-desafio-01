@@ -73,6 +73,22 @@
       }
     }
   }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 72px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 12px;
+  }
 }
 
 @media (width <= 60em) {
