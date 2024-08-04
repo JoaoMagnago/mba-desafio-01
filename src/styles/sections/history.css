@@ -56,8 +56,7 @@
       }
     }
 
-    
-    & img {
+    & .check-icon {
       position: relative;
       /* background: var(--green); */
       /* opacity: 0.12; */
