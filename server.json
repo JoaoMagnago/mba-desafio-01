@@ -3,6 +3,7 @@
     {
       "id": "124-537-835-230",
       "name": "Natália Miranda",
+      "avatar": "./src/assets/pictures/natalia.png",
       "clientSince": "18/09/2023",
       "appointmentHistory": [
         {
@@ -53,7 +54,8 @@
     },
     {
       "id": "207-245-699-104",
-      "name": "Capitão Nascimento",
+      "name": "Júlio Motta",
+      "avatar": "./src/assets/pictures/julio.png",
       "clientSince": "12/04/2023",
       "appointmentHistory": [
         {
@@ -80,8 +82,9 @@
     },
     {
       "id": "523-114-876-908",
-      "name": "Sansão",
+      "name": "Pietro Alcantra",
       "clientSince": "15/07/2023",
+      "avatar": "./src/assets/pictures/pietro.png",
       "appointmentHistory": [
         {
           "date": "22/04/2024",

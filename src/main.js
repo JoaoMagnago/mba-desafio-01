@@ -23,11 +23,14 @@ cardIdInput.addEventListener('input', () => {
 });
 
 const userNameSpan = document.getElementById("user-name")
+const userAvatar = document.querySelector("#user-avatar")
 const clientSinceSpan = document.getElementById("client-since")
 
-const loadUserData = ({ name, clientSince }) => {
+const loadUserData = ({ name, avatar, clientSince }) => {
   userNameSpan.textContent = name
   clientSinceSpan.textContent = `Cliente desde ${clientSince}`
+
+  userAvatar.setAttribute("src", avatar)
 }
 
 const idHandle = document.getElementById("user-id")
@@ -122,6 +125,7 @@ cardIdButton.onclick = async (event) => {
     const {
       id,
       name,
+      avatar,
       clientSince,
       appointmentHistory,
       loyaltyCard
@@ -129,7 +133,7 @@ cardIdButton.onclick = async (event) => {
 
     const { cutsRemaining, totalCuts } = loyaltyCard
 
-    loadUserData({ name, clientSince })
+    loadUserData({ name, avatar, clientSince })
     loadLoyaltyCardData({ id, totalCuts })
     loadHistory(appointmentHistory)
     loadRemainingCutsData({ cutsRemaining, totalCuts })
