@@ -64,10 +64,10 @@
 
     & div:last-of-type {
       & .gift {
-      background: url('../../assets/icons/gift.svg');
-      /* height: 40px;
-      width: 40px; */
-    }}
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
   }
 }
 
@@ -93,6 +93,11 @@
       & img {
         height: 2.5rem;
         width: 2.5rem;
+      }
+
+      &:last-of-type #gift {
+        width: 1.5rem;
+        height: 1.5rem;
       }
     }
   }

@@ -48,6 +48,14 @@ const loadLoyaltyCardData = ({ id, totalCuts }) => {
 
     cardItems[i].appendChild(checkIcon)
   }
+
+  if (totalCuts < 10) {
+    const defaultGiftIcon = document.createElement("img")
+    defaultGiftIcon.setAttribute("src", "./src/assets/icons/gift.svg")
+    defaultGiftIcon.classList.add("gift")
+
+    cardItems[9].appendChild(defaultGiftIcon)
+  }
 }
 
 const history = document.getElementById("history")
@@ -125,6 +133,10 @@ cardIdButton.onclick = async (event) => {
     loadLoyaltyCardData({ id, totalCuts })
     loadHistory(appointmentHistory)
     loadRemainingCutsData({ cutsRemaining, totalCuts })
+
+    if (totalCuts === 10) {
+      setTimeout(() => alert('Parabéns! Seu próximo corte é gratuito!'), 50)
+    }
   } catch (error) {
     console.log(error)
   }
