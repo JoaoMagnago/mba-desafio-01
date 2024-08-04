@@ -9,12 +9,18 @@ async function fetchClientById(id) {
 
     return data
   } catch (error) {
+    alert(`Não foi possível carregar o cliente com o id: "${id}"`)
     console.log(error)
   }
 }
 
 const cardIdButton = document.getElementById("search-card");
 const cardIdInput = document.getElementsByTagName("input")[0];
+
+cardIdInput.addEventListener('input', () => {
+  const hasCharactersRegex = /[^\d-]/g;
+  cardIdInput.value = cardIdInput.value.replace(hasCharactersRegex, '');
+});
 
 const userNameSpan = document.getElementById("user-name")
 const clientSinceSpan = document.getElementById("client-since")
