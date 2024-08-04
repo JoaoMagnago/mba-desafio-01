@@ -15,7 +15,15 @@ async function fetchClientById(id) {
 
 const cardIdButton = document.getElementById("search-card");
 const cardIdInput = document.getElementsByTagName("input")[0];
+
+const userNameSpan = document.getElementById("user-name")
+const clientSinceSpan = document.getElementById("client-since")
 const history = document.getElementById("history")
+
+const loadUserData = ({ name, clientSince }) => {
+  userNameSpan.textContent = name
+  clientSinceSpan.textContent = `Cliente desde ${clientSince}`
+}
 
 const loadHistory = (appointmentHistory) => {
   const historyCountSpan = document.getElementById("history-count")
@@ -55,8 +63,9 @@ cardIdButton.onclick = async (event) => {
     const cardId = cardIdInput.value
     const cardData = await fetchClientById(cardId)
 
-    const { appointmentHistory } = cardData
+    const { name, clientSince, appointmentHistory } = cardData
 
+    loadUserData({ name, clientSince })
     loadHistory(appointmentHistory)
   } catch (error) {
     console.log(error)
