@@ -24,6 +24,26 @@ const loadUserData = ({ name, clientSince }) => {
   clientSinceSpan.textContent = `Cliente desde ${clientSince}`
 }
 
+const idHandle = document.getElementById("user-id")
+const cardList = document.getElementsByClassName("card-list")[0]
+
+const loadLoyaltyCardData = ({ id, totalCuts }) => {
+  idHandle.textContent = `ID: ${id}`
+
+  const cardItems = Array.from(cardList.children)
+
+  for (i = 0; i < 10; i++) {
+    cardItems[i].innerHTML = ""
+  }
+
+  for (i = 0; i < totalCuts; i++) {
+    const checkIcon = document.createElement("img")
+    checkIcon.setAttribute("src", "./src/assets/PinCheck.png")
+
+    cardItems[i].appendChild(checkIcon)
+  }
+}
+
 const history = document.getElementById("history")
 
 const loadHistory = (appointmentHistory) => {
@@ -86,6 +106,7 @@ cardIdButton.onclick = async (event) => {
     const cardData = await fetchClientById(cardId)
 
     const {
+      id,
       name,
       clientSince,
       appointmentHistory,
@@ -95,6 +116,7 @@ cardIdButton.onclick = async (event) => {
     const { cutsRemaining, totalCuts } = loyaltyCard
 
     loadUserData({ name, clientSince })
+    loadLoyaltyCardData({ id, totalCuts })
     loadHistory(appointmentHistory)
     loadRemainingCutsData({ cutsRemaining, totalCuts })
   } catch (error) {
