@@ -28,12 +28,19 @@
         {
           "date": "23/10/2023",
           "time": "15:00"
+        },
+        {
+          "date": "25/11/2023",
+          "time": "15:00"
+        },
+        {
+          "date": "21/12/2023",
+          "time": "15:00"
         }
       ],
       "loyaltyCard": {
-        "totalCuts": 7,
-        "cutsNeeded": 10,
-        "cutsRemaining": 3
+        "totalCuts": 8,
+        "cutsRemaining": 2
       }
     },
     {
@@ -60,7 +67,6 @@
       ],
       "loyaltyCard": {
         "totalCuts": 4,
-        "cutsNeeded": 10,
         "cutsRemaining": 6
       }
     },
@@ -88,8 +94,7 @@
       ],
       "loyaltyCard": {
         "totalCuts": 5,
-        "cutsNeeded": 8,
-        "cutsRemaining": 3
+        "cutsRemaining": 5
       }
     }
   ]

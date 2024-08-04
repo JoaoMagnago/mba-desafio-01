@@ -3,3 +3,55 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.one-cut {
+  &::before {
+    width: 10%;
+  }
+}
+
+.two-cuts {
+  &::before {
+    width: 20%;
+  }
+}
+.three-cuts {
+  &::before {
+    width: 30%;
+  }
+}
+.four-cuts {
+  &::before {
+    width: 40%;
+  }
+}
+.five-cuts {
+  &::before {
+    width: 50%;
+  }
+}
+.six-cuts {
+  &::before {
+    width: 60%;
+  }
+}
+.seven-cuts {
+  &::before {
+    width: 70%;
+  }
+}
+.eight-cuts {
+  &::before {
+    width: 80%;
+  }
+}
+.nine-cuts {
+  &::before {
+    width: 90%;
+  }
+}
+.ten-cuts {
+  &::before {
+    width: 100%;
+  }
+}

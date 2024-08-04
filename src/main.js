@@ -18,12 +18,13 @@ const cardIdInput = document.getElementsByTagName("input")[0];
 
 const userNameSpan = document.getElementById("user-name")
 const clientSinceSpan = document.getElementById("client-since")
-const history = document.getElementById("history")
 
 const loadUserData = ({ name, clientSince }) => {
   userNameSpan.textContent = name
   clientSinceSpan.textContent = `Cliente desde ${clientSince}`
 }
+
+const history = document.getElementById("history")
 
 const loadHistory = (appointmentHistory) => {
   const historyCountSpan = document.getElementById("history-count")
@@ -56,6 +57,27 @@ const loadHistory = (appointmentHistory) => {
   })
 }
 
+const numberOfRemainingCuts = document.getElementById("cuts-remaining")
+const cutsProgress = document.getElementById("cuts-progress")
+const progressBar = document.getElementsByClassName("progress-bar-track")[0]
+
+const loadRemainingCutsData = ({ cutsRemaining, totalCuts }) => {
+  numberOfRemainingCuts.textContent = cutsRemaining
+  cutsProgress.textContent = `${totalCuts} de 10`
+
+  progressBar.classList = ""
+  progressBar.classList.add("progress-bar-track", "progress-bar-track::before")
+
+  const style = document.createElement('style')
+
+  const totalCutsInPercentage = totalCuts * 10
+
+  const rule = `.progress-bar-track::before { width: ${totalCutsInPercentage}% !important; }`
+  style.innerHTML = rule
+
+  document.head.appendChild(style)
+}
+
 cardIdButton.onclick = async (event) => {
   event.preventDefault()
 
@@ -63,10 +85,18 @@ cardIdButton.onclick = async (event) => {
     const cardId = cardIdInput.value
     const cardData = await fetchClientById(cardId)
 
-    const { name, clientSince, appointmentHistory } = cardData
+    const {
+      name,
+      clientSince,
+      appointmentHistory,
+      loyaltyCard
+    } = cardData
+
+    const { cutsRemaining, totalCuts } = loyaltyCard
 
     loadUserData({ name, clientSince })
     loadHistory(appointmentHistory)
+    loadRemainingCutsData({ cutsRemaining, totalCuts })
   } catch (error) {
     console.log(error)
   }
