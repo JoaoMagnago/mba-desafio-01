@@ -1,8 +1,9 @@
 {
   "name": "mba-desafio-01",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "server": "json-server server.json"
   },
